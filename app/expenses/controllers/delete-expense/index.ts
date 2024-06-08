@@ -8,7 +8,7 @@ export const DeleteExpenseController = async (
     try {
         const entityId = request.params.id;
         const data = await db.any(
-            `DELETE FROM expense WHERE expense_id=${entityId};`
+            `DELETE FROM expense WHERE id=${entityId};`
         );
         console.log(data);
         response.json(data);
